@@ -1,0 +1,188 @@
+/* Reset and basic styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FDFFE2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+#task-input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    background-color: #007BFF;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.task:hover {
+    background-color: #f0f0f0;
+}
+
+.task-completed {
+    text-decoration: line-through;
+    background-color: #d4edda;
+}
+
+.task-overdue {
+    color: red;
+}
+
+.task-buttons button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #6c757d;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.task-buttons button:hover {
+    background-color: #5a6268;
+}
+
+.task-buttons button.complete-button {
+    background-color: #28a745;
+}
+
+.task-buttons button.complete-button:hover {
+    background-color: #218838;
+}
+
+.task-buttons button.edit-button {
+    background-color: #007bff;
+}
+
+.task-buttons button.edit-button:hover {
+    background-color: #0069d9;
+}
+
+.task-buttons button.delete-button {
+    background-color: #dc3545;
+}
+
+.task-buttons button.delete-button:hover {
+    background-color: #c82333;
+}
+
+.task-buttons button.set-deadline-button,
+.task-buttons button.edit-deadline-button {
+    background-color: #ffc107;
+}
+
+.task-buttons button.set-deadline-button:hover,
+.task-buttons button.edit-deadline-button:hover {
+    background-color: #e0a800;
+}
+
+.task-buttons button:not(:last-child) {
+    margin-right: 5px;
+}
+
+.task-buttons button[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.task-buttons input[type="datetime-local"] {
+    padding: 5px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 200px;
+}
+
+.task-buttons input[type="datetime-local"]:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.task-buttons .deadline {
+    font-size: 14px;
+    margin-left: 10px;
+    color: #6c757d;
+}
+
+.task-buttons .deadline-overdue {
+    color: red;
+}
+
+.task-buttons .deadline input[type="datetime-local"] {
+    width: 200px;
+}
+
+.task-buttons .deadline button {
+    margin-left: 10px;
+}
+
+.task-buttons .deadline button.cancel-deadline-button {
+    background-color: #dc3545;
+}
+
+.task-buttons .deadline button.cancel-deadline-button:hover {
+    background-color: #c82333;
+}
